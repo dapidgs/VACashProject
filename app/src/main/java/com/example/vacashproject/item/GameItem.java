@@ -1,4 +1,4 @@
-package com.example.vacashproject;
+package com.example.vacashproject.item;
 
 public class GameItem {
     String name;

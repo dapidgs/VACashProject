@@ -5,6 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Button;
+
+import com.example.vacashproject.item.GameItem;
+import com.example.vacashproject.item.GameItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

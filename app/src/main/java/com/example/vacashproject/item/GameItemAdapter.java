@@ -1,4 +1,4 @@
-package com.example.vacashproject;
+package com.example.vacashproject.item;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.vacashproject.R;
 
 import java.util.List;
 

@@ -37,29 +37,46 @@
         android:id="@+id/shopName"
         android:layout_toEndOf="@+id/gameImage"
         android:layout_below="@+id/gameName"
-        android:textColor="#43A19F"
+        android:textColor="@color/secondary_teal"
         android:textSize="11sp"
-        android:text="Apollo  Gaming"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gamePrice"
-        android:layout_toEndOf="@+id/gameImage"
-        android:layout_below="@+id/shopName"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins_reguler"
         android:text="Apollo Gaming"/>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buyButton"
-        android:layout_alignBottom="@id/gamePrice"
-        android:layout_toEndOf="@+id/gamePrice"
-        android:text="Halo"/>
+        android:layout_toEndOf="@+id/gameImage"
+        android:layout_below="@+id/shopName"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gamePrice"
+            android:textColor="@color/primary_white"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_weight="1"
+            android:text="Rp25000"
+
+        />
+        <Button
+            android:id="@+id/buyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingVertical="2dp"
+            android:textColor="@color/primary_teal"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="11sp"
+            style="@style/BtnWhite"
+            android:text="Buy"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+
 
 
 </RelativeLayout>
