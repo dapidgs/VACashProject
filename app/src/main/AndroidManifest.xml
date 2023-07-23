@@ -13,6 +13,12 @@
         android:theme="@style/Theme.VACashProject"
         tools:targetApi="31">
         <activity
+            android:name=".toolbar_profile"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
             android:name=".ItemPage"
             android:exported="true"
             android:label="Item Page">
