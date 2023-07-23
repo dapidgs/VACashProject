@@ -23,7 +23,7 @@
         android:layout_height="40dp"
         android:gravity="center_vertical"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="23.5sp"
         android:text="Seriakan Petualanganmu!"
         android:textStyle="bold"/>
 
@@ -41,12 +41,25 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="90dp"
         android:gravity="center_vertical"
         android:textColor="@color/primary_white"
-        android:textSize="25sp"
+        android:textSize="23.5sp"
         android:text="Hal-hal yang Diharapkan di Diablo IV | DG MENYENANGKAN!"
         android:textStyle="bold"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:background="@null"
+        app:tabTextColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/white"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </LinearLayout>
