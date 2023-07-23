@@ -35,8 +35,9 @@
         android:layout_margin="5dp"
         android:layout_centerInParent="true"
         android:src="@drawable/image1"
+        app:shapeAppearanceOverlay="@style/roundimageview"
         />
-<!--        app:shapeAppearanceOverlay="@style/roundimageview"-->
+
 
     <TextView
         android:layout_width="match_parent"
