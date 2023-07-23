@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_border"
+    android:elevation="8dp"
+    >
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/gameImage"
+        app:srcCompat="@drawable/mlbb_logo"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_image"
+        android:layout_marginStart="15sp"
+        android:layout_marginVertical="8dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="game logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gameName"
+        android:layout_toEndOf="@+id/gameImage"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopName"
+        android:layout_toEndOf="@+id/gameImage"
+        android:layout_below="@+id/gameName"
+        android:textColor="@color/secondary_teal"
+        android:textSize="11sp"
+        android:fontFamily="@font/poppins_reguler"
+        android:text="Apollo Gaming"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/gameImage"
+        android:layout_below="@+id/shopName"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gamePrice"
+            android:textColor="@color/primary_white"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_weight="1"
+            android:text="Rp25000"
+
+        />
+        <Button
+            android:id="@+id/buyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingVertical="2dp"
+            android:textColor="@color/primary_teal"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="11sp"
+            style="@style/BtnWhite"
+            android:text="Buy"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
