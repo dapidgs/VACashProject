@@ -46,17 +46,5 @@
         android:text="Hal-hal yang Diharapkan di Diablo IV | DG MENYENANGKAN!"
         android:textStyle="bold"/>
 
-    <!--    <androidx.viewpager2.widget.ViewPager2-->
-    <!--        android:id="@+id/view_pager"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="160dp"/>-->
-    <!--    -->
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="160dp"-->
-    <!--        android:foregroundGravity="center_vertical|center_horizontal"-->
-    <!--        android:orientation="horizontal"/>-->
-
 
 </LinearLayout>
