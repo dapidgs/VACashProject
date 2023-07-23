@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".HomePage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/font_awesome_solid"
+        android:text="\uf0c9"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="Seriakan Petualanganmu!"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_margin="5dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/image1"
+        app:shapeAppearanceOverlay="@style/roundimageview"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="Hal-hal yang Diharapkan di Diablo IV | DG MENYENANGKAN!"
+        android:textStyle="bold"/>
+
+    <!--    <androidx.viewpager2.widget.ViewPager2-->
+    <!--        android:id="@+id/view_pager"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="160dp"/>-->
+    <!--    -->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="160dp"-->
+    <!--        android:foregroundGravity="center_vertical|center_horizontal"-->
+    <!--        android:orientation="horizontal"/>-->
+
+
+</LinearLayout>
