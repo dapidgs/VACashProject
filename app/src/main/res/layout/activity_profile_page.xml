@@ -79,7 +79,6 @@
                 android:background="@android:drawable/editbox_background"
                 android:hint="Enter Amount" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <Button
             android:layout_width="202dp"
             android:layout_height="wrap_content"
