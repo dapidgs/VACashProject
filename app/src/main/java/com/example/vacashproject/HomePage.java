@@ -1,18 +1,35 @@
 package com.example.vacashproject;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
 import com.example.vacashproject.Adapters.TabAdapter;
+import com.example.vacashproject.Models.Item;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomePage extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager2 viewPager;
+
     TabAdapter adapter;
+
+    ViewPager carouselContainer;
+    CarouselAdapter carouselAdapter;
+    // Posisi image sekarang dimana
+    int currImage = 0;
+    int[] carouselImages = {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,5 +72,26 @@ public class HomePage extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+        carouselContainer = findViewById(R.id.carouselContainer);
+
+        // create adapter
+        carouselAdapter = new CarouselAdapter(this, carouselImages);
+        carouselContainer.setAdapter(carouselAdapter);
+
+        imageChange();
+    }
+
+    void imageChange(){
+        carouselContainer.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currImage = (carouselContainer.getCurrentItem() +1) % carouselImages.length;
+                carouselContainer.setCurrentItem(currImage);
+                // kalau sudah jalan lanjut jalanin lagi
+                imageChange();
+            }
+            // dalam milliseconds
+        }, 3000);
     }
 }

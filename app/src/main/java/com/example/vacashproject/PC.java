@@ -3,10 +3,15 @@ package com.example.vacashproject;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +64,19 @@ public class PC extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_p_c, container, false);
+        View view = inflater.inflate(R.layout.fragment_p_c, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        List<HomePageItem> items = new ArrayList<HomePageItem>();
+
+        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
+        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
+        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
+        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
+
+        recyclerView.setAdapter(new MyAdapter(view.getContext(), items));
+        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 3));
+
+        return view;
     }
 }

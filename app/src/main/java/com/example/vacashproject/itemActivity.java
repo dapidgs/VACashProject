@@ -25,8 +25,8 @@ public class itemActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Vector<Item> itemVector = new Vector<>();
-        itemVector.add(new Item(1, "image1", "10000", R.drawable.image2));
-        itemVector.add(new Item(2, "image2", "20000", R.drawable.image2));
+        itemVector.add(new Item(1, "image1", "10000", R.drawable.cardimg1));
+        itemVector.add(new Item(2, "image2", "20000", R.drawable.cardimg1));
 
         adapter = new ItemAdapter(itemVector);
 
