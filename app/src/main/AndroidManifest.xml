@@ -22,6 +22,11 @@
             android:label="Item Page">
         </activity>
         <activity
+            android:name=".ProfilePage"
+            android:exported="true"
+            android:label="Profile Page">
+        </activity>
+        <activity
             android:name=".HomePage"
             android:exported="true"
             android:label="Item Page">
