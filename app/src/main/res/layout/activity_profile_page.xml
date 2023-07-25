@@ -15,10 +15,12 @@
         android:gravity="center"
         android:orientation="vertical"
         android:paddingTop="15dp">
+
         <com.mikhaellopez.circularimageview.CircularImageView
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:src="@drawable/profile_photo"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +88,8 @@
             android:background="@drawable/topup_btn_profile"
             android:text="Top Up"
             android:textAllCaps="false"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            />
 
         <TextView
             android:layout_width="wrap_content"
