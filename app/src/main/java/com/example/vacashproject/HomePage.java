@@ -1,20 +1,13 @@
 package com.example.vacashproject;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
 import com.example.vacashproject.Adapters.TabAdapter;
-import com.example.vacashproject.Models.Item;
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomePage extends AppCompatActivity {
 
@@ -24,11 +17,15 @@ public class HomePage extends AppCompatActivity {
     TabAdapter adapter;
 
     ViewPager carouselContainer;
+
     CarouselAdapter carouselAdapter;
     // Posisi image sekarang dimana
     int currImage = 0;
-    int[] carouselImages = {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4};
-
+    int image1 = R.drawable.image1;
+    int image2 = R.drawable.image2;
+    int image3 = R.drawable.image3;
+    int image4 = R.drawable.image4;
+    int[] carouselImages = {image1, image2, image3, image4};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +34,7 @@ public class HomePage extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
+
         adapter = new TabAdapter(getSupportFragmentManager(), getLifecycle());
 
         viewPager.setAdapter(adapter);

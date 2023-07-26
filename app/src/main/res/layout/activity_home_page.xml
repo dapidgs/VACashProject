@@ -38,15 +38,21 @@
 <!--            app:shapeAppearanceOverlay="@style/roundimageview"-->
 <!--        />-->
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        >
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/carouselContainer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_carousel"
-        app:shapeAppearanceOverlay="@style/roundimageview"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:layout_width="match_parent"
