@@ -1,65 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/rounded_border"
-    android:elevation="8dp"
-    >
+    app:cardElevation="3dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:id="@+id/gameImage"
-        app:srcCompat="@drawable/mlbb_logo"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_image"
-        android:layout_marginStart="15sp"
-        android:layout_marginVertical="8dp"
-        android:layout_centerVertical="true"
-        android:contentDescription="game logo"/>
-
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gameName"
-        android:layout_toEndOf="@+id/gameImage"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Name"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/shopName"
-        android:layout_toEndOf="@+id/gameImage"
-        android:layout_below="@+id/gameName"
-        android:textColor="#43A19F"
-        android:textSize="11sp"
-        android:text="Apollo  Gaming"/>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gamePrice"
-        android:layout_toEndOf="@+id/gameImage"
-        android:layout_below="@+id/shopName"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Apollo Gaming"/>
+            <ImageView
+                android:id="@+id/imageItem"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/image1" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buyButton"
-        android:layout_alignBottom="@id/gamePrice"
-        android:layout_toEndOf="@+id/gamePrice"
-        android:text="Halo"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-</RelativeLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nameGame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Name Game"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/itemName"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Item Name"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/qty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_weight="1"
+                        android:text="Qty (pcs)"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="200dp"
+                        android:layout_weight="1"
+                        android:text="IDR Total Price"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nameShop"
+            android:layout_width="406dp"
+            android:layout_height="20dp"
+            android:background="@color/primary_teal"
+            android:justificationMode="inter_word"
+            android:gravity="center"
+            android:text="Name Shop"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

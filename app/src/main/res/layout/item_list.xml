@@ -14,7 +14,7 @@
         android:id="@+id/gameImage"
         app:srcCompat="@drawable/mlbb_logo"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_image"
+
         android:layout_marginStart="15sp"
         android:layout_marginVertical="8dp"
         android:layout_centerVertical="true"
