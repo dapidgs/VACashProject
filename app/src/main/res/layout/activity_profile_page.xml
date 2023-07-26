@@ -96,12 +96,15 @@
             android:fontFamily="@font/poppins_bold"
             android:textColor="@color/white"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/gameItemTransactions"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            />
+            android:layout_margin="10dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
 
 
