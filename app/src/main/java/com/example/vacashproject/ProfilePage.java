@@ -7,10 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.vacashproject.Adapters.AdapterTransactions;
 import com.example.vacashproject.Models.Item;
 import com.example.vacashproject.Models.ItemTransactions;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,9 @@ import java.util.List;
 public class ProfilePage extends AppCompatActivity {
 
     RecyclerView RVTransaction;
+    Integer totalBalance = 0;
+
+    TextView topUpError;
     private List<ItemTransactions> itemTransactionsList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,5 +46,24 @@ public class ProfilePage extends AppCompatActivity {
         RVTransaction.setItemAnimator(new DefaultItemAnimator());
 
 
+        // Button topup
+        Button topUpButton = findViewById(R.id.topUpButton);
+        TextView balance = findViewById(R.id.balance);
+        TextInputEditText topUpField = findViewById(R.id.topUpField);
+        topUpError = findViewById(R.id.topuperr);
+
+        topUpButton.setOnClickListener(view -> {
+                totalBalance += parse(topUpField.getText().toString());
+                balance.setText(totalBalance.toString());
+        });
+    }
+
+    public Integer parse (String text) {
+        try {
+            return Integer.parseInt(text);
+        } catch (Exception e) {
+            topUpError.setText("Error");
+            return 0;
+        }
     }
 }
