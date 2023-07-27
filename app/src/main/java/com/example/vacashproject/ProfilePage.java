@@ -31,7 +31,7 @@ public class ProfilePage extends AppCompatActivity {
         itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb3,"2 pcs", "30000", "Apollo", "Mobile Legends", "MLBB 50 Diamonds"));
         itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb2,"3 pcs", "30000", "Maju Jaya", "Mobile Legends", "MLBB 50 Diamonds"));
 
-        RVTransaction = findViewById(R.id.recyclerView);
+        RVTransaction = findViewById(R.id.RVTransaction);
         AdapterTransactions adapterTransactions = new AdapterTransactions(this,itemTransactionsList);
         RVTransaction.setAdapter(adapterTransactions);
         RVTransaction.setHasFixedSize(true);
