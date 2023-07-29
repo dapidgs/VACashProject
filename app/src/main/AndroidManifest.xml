@@ -17,6 +17,11 @@
             android:exported="false">
         </activity>
         <activity
+            android:name=".DetailPage"
+            android:exported="true"
+            android:label="Detail Page">
+        </activity>
+        <activity
             android:name=".ItemPage"
             android:exported="true"
             android:label="Item Page">
