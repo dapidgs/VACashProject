@@ -38,11 +38,10 @@ public class GameItemAdapter extends RecyclerView.Adapter<GameItemViewHolder> {
 
         holder.buyBtn.setOnClickListener(view -> {
             try {
-                holder.buyBtn.setText("Halo");
                 Intent intent = new Intent(holder.itemView.getContext(), DetailPage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-                intent.putExtra("item", new GameItem("MLBB 50 Diamonds", "Jaya Gaming", 50000F, R.drawable.mlbb1));
+                intent.putExtra("item", items.get(position));
                 context.startActivity(intent);
             }catch (Exception e){
                 e.printStackTrace();

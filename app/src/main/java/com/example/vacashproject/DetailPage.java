@@ -8,7 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.vacashproject.item.GameItem;
 
 public class DetailPage extends AppCompatActivity {
 
@@ -16,12 +19,28 @@ public class DetailPage extends AppCompatActivity {
     private TextView backBtn;
     EditText email, username;
 
+    TextView itemName, itemPrice;
+
+    ImageView itemImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
         Intent fromItem = getIntent();
+        System.out.println();
+        if (fromItem != null) {
+            GameItem gameItem = (GameItem) fromItem.getSerializableExtra("item");
+            itemName = findViewById(R.id.itemName);
+            itemPrice = findViewById(R.id.itemPrice);
+            itemImage = findViewById(R.id.imageView);
+
+            itemName.setText(gameItem.getName());
+            itemPrice.setText("IDR " + gameItem.getPrice());
+            itemImage.setImageResource(gameItem.getImage());
+
+        }
 
         button = findViewById(R.id.buyBtn);
         email = findViewById(R.id.email);
