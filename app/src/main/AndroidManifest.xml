@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".ItemPage"
-            android:exported="false"
+            android:exported="true"
             android:label="Item Page">
         </activity>
         <activity

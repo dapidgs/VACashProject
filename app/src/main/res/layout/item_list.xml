@@ -41,25 +41,38 @@
         android:textSize="11sp"
         android:text="Apollo  Gaming"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/gamePrice"
         android:layout_toEndOf="@+id/gameImage"
         android:layout_below="@+id/shopName"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Apollo Gaming"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buyButton"
-        android:layout_alignBottom="@id/gamePrice"
-        android:layout_toEndOf="@+id/gamePrice"
-        android:text="Halo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gamePrice"
+            android:textColor="@color/primary_white"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Apollo Gaming"
+            android:layout_weight="1"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:id="@+id/buyButton"
+            android:text="Buy"
+            android:textColor="@color/primary_teal"
+            android:fontFamily="@font/poppins_bold"
+            android:background="@drawable/rounded_btn_buy"/>
+    </LinearLayout>
+
 
 
 </RelativeLayout>
