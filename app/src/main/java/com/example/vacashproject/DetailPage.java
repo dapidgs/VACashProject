@@ -19,7 +19,7 @@ public class DetailPage extends AppCompatActivity {
     private TextView backBtn;
     EditText email, username;
 
-    TextView itemName, itemPrice;
+    TextView itemName, itemPrice, itemDesc;
 
     ImageView itemImage;
 
@@ -35,10 +35,12 @@ public class DetailPage extends AppCompatActivity {
             itemName = findViewById(R.id.itemName);
             itemPrice = findViewById(R.id.itemPrice);
             itemImage = findViewById(R.id.imageView);
+            itemDesc = findViewById(R.id.itemDesc);
 
             itemName.setText(gameItem.getName());
             itemPrice.setText("IDR " + gameItem.getPrice());
             itemImage.setImageResource(gameItem.getImage());
+            itemDesc.setText(gameItem.getDescription());
 
         }
 

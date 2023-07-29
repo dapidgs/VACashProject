@@ -34,15 +34,15 @@ public class GameItemAdapter extends RecyclerView.Adapter<GameItemViewHolder> {
         holder.gameName.setText(items.get(position).getName());
         holder.shopName.setText(items.get(position).getShopName());
         holder.gameImage.setImageResource(items.get(position).getImage());
-        holder.gamePrice.setText("Rp"+String.valueOf(items.get(position).getPrice()));
+        holder.gamePrice.setText("Rp"+items.get(position).getPrice());
 
         holder.buyBtn.setOnClickListener(view -> {
             try {
-                Intent intent = new Intent(holder.itemView.getContext(), DetailPage.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent toDetail = new Intent(holder.itemView.getContext(), DetailPage.class);
+                toDetail.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-                intent.putExtra("item", items.get(position));
-                context.startActivity(intent);
+                toDetail.putExtra("item", items.get(position));
+                context.startActivity(toDetail);
             }catch (Exception e){
                 e.printStackTrace();
             }

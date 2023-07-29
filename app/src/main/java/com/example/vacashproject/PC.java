@@ -69,10 +69,11 @@ public class PC extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         List<HomePageItem> items = new ArrayList<HomePageItem>();
 
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
+        items.add(new HomePageItem("Valorant", R.drawable.valorant_logo, "PC"));
+        items.add(new HomePageItem("Call of Duty", R.drawable.codpc_logo, "PC"));
+        items.add(new HomePageItem("Far Cry", R.drawable.farcry_logo, "PC"));
+        items.add(new HomePageItem("Resident Evil", R.drawable.residentevil_logo, "PC"));
+        items.add(new HomePageItem("Roblox", R.drawable.roblox_logo, "PC"));
 
         recyclerView.setAdapter(new MyAdapter(view.getContext(), items));
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 3));

@@ -40,8 +40,8 @@
         </activity>
         <activity
             android:name=".HomePage"
-            android:exported="false"
-            android:label="Item Page" >
+            android:exported="true"
+            android:label="Home Page" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -60,15 +60,6 @@
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
-        </activity>
-        <activity
-            android:name=".detail"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".BurgerMenu"
