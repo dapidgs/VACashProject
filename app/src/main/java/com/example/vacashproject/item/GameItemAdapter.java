@@ -1,6 +1,7 @@
 package com.example.vacashproject.item;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -8,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vacashproject.R;
+import com.example.vacashproject.DetailPage;
 
 import java.util.List;
 
@@ -17,8 +19,8 @@ public class GameItemAdapter extends RecyclerView.Adapter<GameItemViewHolder> {
     List<GameItem> items;
 
     public GameItemAdapter(Context context, List<GameItem> items) {
-        this.context = context;
         this.items = items;
+        this.context = context;
     }
 
     @NonNull
@@ -33,6 +35,19 @@ public class GameItemAdapter extends RecyclerView.Adapter<GameItemViewHolder> {
         holder.shopName.setText(items.get(position).getShopName());
         holder.gameImage.setImageResource(items.get(position).getImage());
         holder.gamePrice.setText("Rp"+String.valueOf(items.get(position).getPrice()));
+
+        holder.buyBtn.setOnClickListener(view -> {
+            try {
+                holder.buyBtn.setText("Halo");
+                Intent intent = new Intent(holder.itemView.getContext(), DetailPage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                intent.putExtra("item", new GameItem("MLBB 50 Diamonds", "Jaya Gaming", 50000F, R.drawable.mlbb1));
+                context.startActivity(intent);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        });
     }
 
     @Override

@@ -49,15 +49,16 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="255dp"
+        android:layout_height="210dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mobile_legend"
+        app:srcCompat="@drawable/mobile_legends"
         />
+
 
 
     <!--  Diamonds Remainder Info -->
@@ -66,28 +67,20 @@
         android:layout_height="25dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="295dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.436">
-
-        <TextView
-            android:id="@+id/itemBase"
+        <ProgressBar
+            android:id="@+id/remainder"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="7dp"
-            android:background="@drawable/diamonds_remainder"
-            />
-
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="289dp" />
         <TextView
-            android:id="@+id/remainderItems"
-            android:layout_width="300dp"
-            android:layout_height="7dp"
-            android:background="@drawable/diamonds"
-            />
-
-        <TextView
-            android:id="@+id/itemRemain"
+            android:id="@+id/remainderDesc"
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:layout_marginTop="10dp"
@@ -100,6 +93,8 @@
 
     </RelativeLayout>
 
+
+
     <!-- Item Description   -->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -107,7 +102,7 @@
         android:background="@drawable/description"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -240,10 +235,11 @@
             android:textColor="#FDFDFD"
             />
         <TextView
+            android:id="@+id/decrement"
             android:layout_width="17dp"
             android:layout_height="17dp"
             android:layout_marginTop="105dp"
-            android:layout_marginLeft="300dp"
+            android:layout_marginLeft="280dp"
             android:fontFamily="@font/font_awesome_solid"
             android:text="\uf056"
             android:textColor="#FDFDFD"
@@ -254,7 +250,7 @@
             android:layout_width="20dp"
             android:layout_height="13dp"
             android:layout_marginTop="105dp"
-            android:layout_marginLeft="327dp"
+            android:layout_marginLeft="305dp"
             android:text="0"
             android:fontFamily="@font/poppins_reguler"
             android:textSize="9sp"
@@ -262,10 +258,11 @@
             android:textAlignment="center"
             />
         <TextView
+            android:id="@+id/increment"
             android:layout_width="18dp"
             android:layout_height="17dp"
             android:layout_marginTop="105dp"
-            android:layout_marginLeft="355dp"
+            android:layout_marginLeft="335dp"
             android:fontFamily="@font/font_awesome_solid"
             android:text="\uf055"
             android:textColor="#FDFDFD"
@@ -343,7 +340,5 @@
         </LinearLayout>
 
     </RelativeLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

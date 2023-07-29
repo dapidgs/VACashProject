@@ -1,6 +1,8 @@
 package com.example.vacashproject.item;
 
-public class GameItem {
+import java.io.Serializable;
+
+public class GameItem implements Serializable {
     String name;
     String shopName;
     Float price;
