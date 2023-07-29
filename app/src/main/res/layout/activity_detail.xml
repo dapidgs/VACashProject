@@ -75,6 +75,8 @@
         <ProgressBar
             android:id="@+id/remainder"
             style="?android:attr/progressBarStyleHorizontal"
+            android:progressBackgroundTint="@color/grey"
+            android:progressTint="@color/light_green"
             android:layout_width="match_parent"
             android:layout_height="7dp"
             tools:layout_editor_absoluteX="19dp"
@@ -340,5 +342,76 @@
         </LinearLayout>
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bgDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="194dp"
+        android:background="@drawable/description"
+        >
+
+        <TextView
+            android:id="@+id/closeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="23dp"
+            android:textAlignment="center"
+            android:textColor="@color/light_green"
+            android:fontFamily="@font/font_awesome_solid"
+            android:textSize="30sp"
+            android:text="\uf057"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="65dp"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_error"
+            android:fontFamily="@font/font_awesome_solid"
+            android:text="\uf071"
+            android:textSize="75sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="145dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_black"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="13sp"
+            android:text="Warning!"/>
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="170dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_black"
+            android:textColor="@color/light_green"
+            android:text="Error message"/>
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
