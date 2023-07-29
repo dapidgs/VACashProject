@@ -1,16 +1,19 @@
 package com.example.vacashproject.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.vacashproject.ItemPage;
 import com.example.vacashproject.Models.Item;
 import com.example.vacashproject.Models.ItemTransactions;
 import com.example.vacashproject.R;
@@ -49,6 +52,12 @@ public class AdapterTransactions extends RecyclerView.Adapter<AdapterTransaction
         holder.itemName.setText(item.getItemName());
         Glide.with(ctx).load(item.getImageItem()).into(holder.imageItem);
 
+        holder.itemView.setOnClickListener(view -> {
+            holder.nameGame.setText("halo");
+            Intent toItem = new Intent(holder.itemView.getContext(), ItemPage.class);
+            toItem.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            ctx.startActivity(toItem);
+        });
     }
 
     @Override

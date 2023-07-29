@@ -4,6 +4,8 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -18,11 +20,6 @@
         <activity
             android:name=".itemActivity"
             android:exported="false" >
-        </activity>
-        <activity
-            android:name=".DetailPage"
-            android:exported="true"
-            android:label="Detail Page">
         </activity>
         <activity
             android:name=".ItemPage"
@@ -62,7 +59,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".detail"
+            android:name=".DetailPage"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
