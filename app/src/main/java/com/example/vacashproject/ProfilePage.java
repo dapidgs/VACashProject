@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.vacashproject.Adapters.AdapterTransactions;
 import com.example.vacashproject.Models.Item;
@@ -18,7 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProfilePage extends AppCompatActivity {
+public class ProfilePage extends AppCompatActivity implements RecycleViewTransactions {
 
     RecyclerView RVTransaction;
     Integer totalBalance = 0;
@@ -38,7 +39,7 @@ public class ProfilePage extends AppCompatActivity {
         itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb2,"3 pcs", "30000", "Maju Jaya", "Mobile Legends", "MLBB 50 Diamonds"));
 
         RVTransaction = findViewById(R.id.RVTransaction);
-        AdapterTransactions adapterTransactions = new AdapterTransactions(this,itemTransactionsList);
+        AdapterTransactions adapterTransactions = new AdapterTransactions(this,itemTransactionsList, this);
         RVTransaction.setAdapter(adapterTransactions);
         RVTransaction.setHasFixedSize(true);
         GridLayoutManager manager = new GridLayoutManager(this,1,RecyclerView.VERTICAL,false);
@@ -66,4 +67,14 @@ public class ProfilePage extends AppCompatActivity {
             return 0;
         }
     }
+
+    @Override
+    public void onItemClick(int position) {
+
+    }
+
+//    @Override
+//    public void onItemClick(int position) {
+//        Toast.makeText(this, itemTransactionsList.get(position), Toast.LENGTH_SHORT).show();
+//    }
 }

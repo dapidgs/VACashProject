@@ -105,8 +105,6 @@
                 android:backgroundTint="@color/primary_teal"
                 android:text="Top Up" />
 
-
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
