@@ -69,7 +69,7 @@ public class Mobile extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         List<HomePageItem> items = new ArrayList<HomePageItem>();
 
-        items.add(new HomePageItem("Mobile Legend", R.drawable.mlbb_logo, "Mobile"));
+        items.add(new HomePageItem("Mobile Legends", R.drawable.mlbb_logo, "Mobile"));
         items.add(new HomePageItem("Free Fire", R.drawable.freefire_logo, "Mobile"));
         items.add(new HomePageItem("CoD Mobile", R.drawable.cod_mobile_logo, "Mobile"));
         items.add(new HomePageItem("PUBG Mobile", R.drawable.pubgmobile_logo, "Mobile"));

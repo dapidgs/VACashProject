@@ -37,8 +37,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
             toItemPage.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
             toItemPage.putExtra("game", items.get(position));
-//            toItemPage.putExtra("gameName", items.get(position).getName());
-//            toItemPage.putExtra("gameImage", items.get(position).getImage());
             context.startActivity(toItemPage);
         });
     }

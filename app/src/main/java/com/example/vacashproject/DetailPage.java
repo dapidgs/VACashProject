@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.example.vacashproject.item.GameItem;
+
 public class DetailPage extends AppCompatActivity {
 
     private Button button;
