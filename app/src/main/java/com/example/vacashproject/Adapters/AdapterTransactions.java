@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+//import com.bumptech.glide.Glide;
 import com.example.vacashproject.ItemPage;
 import com.example.vacashproject.Models.Item;
 import com.example.vacashproject.Models.ItemTransactions;
@@ -50,7 +50,7 @@ public class AdapterTransactions extends RecyclerView.Adapter<AdapterTransaction
         holder.nameShop.setText(item.getNameShop());
         holder.nameGame.setText(item.getNameGame());
         holder.itemName.setText(item.getItemName());
-        Glide.with(ctx).load(item.getImageItem()).into(holder.imageItem);
+//        Glide.with(ctx).load(item.getImageItem()).into(holder.imageItem);
 
         holder.itemView.setOnClickListener(view -> {
             holder.nameGame.setText("halo");
@@ -82,11 +82,11 @@ public class AdapterTransactions extends RecyclerView.Adapter<AdapterTransaction
                 @Override
                 public void onClick(View view) {
                     if (recycleViewTransactions !=null){
-                          int pos = getBindingAdapterPosition();
-                          if (pos != RecyclerView.NO_POSITION){
-                              recycleViewTransactions.onItemClick(pos);
-
-                          }
+//                          int pos = getBindingAdapterPosition();
+//                          if (pos != RecyclerView.NO_POSITION){
+//                              recycleViewTransactions.onItemClick(pos);
+//
+//                          }
 
                     }
 //                    recycleViewTransactions.onItemClick(getAdapterPosition() );
