@@ -9,14 +9,14 @@
     tools:openDrawer="start">
 
 
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:id="@+id/nav_view"-->
-<!--        app:headerLayout="@layout/header_menu"-->
-<!--        app:menu="@menu/main_menu"-->
-<!--        android:layout_gravity="start"-->
-<!--        />-->
+    <com.google.android.material.navigation.NavigationView
+        app:itemTextColor="@color/white"
+        android:background="@drawable/gradient"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,12 +40,7 @@
                 app:titleTextColor="@color/white"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                >
-                <!--                android:minHeight="?attr/actionBarSize"-->
-                <!--                android:theme="?attr/actionBarTheme">-->
-
+                android:layout_height="wrap_content">
             </androidx.appcompat.widget.Toolbar>
 
             <TextView
@@ -68,19 +63,19 @@
             <!--            app:shapeAppearanceOverlay="@style/roundimageview"-->
             <!--        />-->
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="20dp">
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/carouselContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"/>
-            </androidx.cardview.widget.CardView>
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                app:cardCornerRadius="20dp">-->
+<!--            </androidx.cardview.widget.CardView>-->
 
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_marginTop="20dp"
+                android:id="@+id/carouselContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true" />
 
             <TextView
                 android:layout_width="match_parent"

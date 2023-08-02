@@ -4,15 +4,15 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
-    tools:context=".BurgerMenu"
+    tools:context=".HomePage"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:label="Main Drawer Layout"
-        android:layout_height="match_parent"
-        app:menu="@menu/main_menu"
-        android:layout_gravity="start"/>
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:label="Main Drawer Layout"-->
+<!--        app:menu="@menu/main_menu"-->
+<!--        android:layout_gravity=""/>-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

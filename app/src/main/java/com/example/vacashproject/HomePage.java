@@ -19,6 +19,7 @@ public class HomePage extends AppCompatActivity {
     // burger2
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+
     Toolbar toolbar;
     // end burger2
 
@@ -28,6 +29,8 @@ public class HomePage extends AppCompatActivity {
     TabAdapter adapter;
 
     ViewPager carouselContainer;
+
+    Toolbar burger_button;
 
     CarouselAdapter carouselAdapter;
     // Posisi image sekarang dimana
@@ -56,7 +59,11 @@ public class HomePage extends AppCompatActivity {
 
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawerLayout.addDrawerListener(toggle);
+        // Menonaktifkan animasi transisi slide
+//        toggle.setDrawerSlideAnimationEnabled(false);
+//        toggle.setHomeAsUpIndicator(R.drawable.baseline_menu_24); // Mengatur ikon navigasi di posisi "end"
+//        toggle.syncState();
+        //        drawerLayout.addDrawerListener(toggle);
 //        toggle.syncState();
 
         // end burger2
