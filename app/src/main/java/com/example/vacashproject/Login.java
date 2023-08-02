@@ -52,7 +52,7 @@ public class Login extends AppCompatActivity {
                     msg.setVisibility(View.VISIBLE);
                 }
                 else {
-                    Intent loginIntent = new Intent(Login.this, Login.class);
+                    Intent loginIntent = new Intent(Login.this, HomePage.class);
                     loginIntent.putExtra("email", email_check);
                     startActivity(loginIntent);
                 }
