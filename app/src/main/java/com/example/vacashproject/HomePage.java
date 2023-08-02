@@ -2,12 +2,12 @@ package com.example.vacashproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toolbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -46,7 +46,10 @@ public class HomePage extends AppCompatActivity {
     int image4 = R.drawable.image4;
     int[] carouselImages = {image1, image2, image3, image4};
 
+
+
     //burger
+
     public void onHomeClick(MenuItem item) {
         Intent homeIntent = new Intent(HomePage.this, HomePage.class);
         startActivity(homeIntent);
@@ -62,7 +65,6 @@ public class HomePage extends AppCompatActivity {
         startActivity(logoutIntent);
     }
     //endburger
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,7 +148,20 @@ public class HomePage extends AppCompatActivity {
             carouselContainer.setAdapter(carouselAdapter);
 
         imageChange();
+
+
     }
+
+//    @Override
+//    public void onBackPressed(){
+//        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+//            drawerLayout.closeDrawer(GravityCompat.START);
+//        }else{
+//            super.onBackPressed();
+//        }
+//    }
+
+
 
     void imageChange(){
         carouselContainer.postDelayed(new Runnable() {
@@ -161,3 +176,5 @@ public class HomePage extends AppCompatActivity {
         }, 3000);
     }
 }
+
+
