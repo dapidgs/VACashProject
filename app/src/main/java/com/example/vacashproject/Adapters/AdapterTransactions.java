@@ -47,7 +47,6 @@ public class AdapterTransactions extends RecyclerView.Adapter<AdapterTransaction
         final ItemTransactions item = itemTransactionsList.get(position);
         holder.qty.setText(item.getQty());
         holder.totalPrice.setText(item.getTotalPrice());
-        holder.nameShop.setText(item.getNameShop());
         holder.nameGame.setText(item.getNameGame());
         holder.itemName.setText(item.getItemName());
 //        Glide.with(ctx).load(item.getImageItem()).into(holder.imageItem);
@@ -67,14 +66,13 @@ public class AdapterTransactions extends RecyclerView.Adapter<AdapterTransaction
 
     public class viewHolder extends RecyclerView.ViewHolder{
         ImageView imageItem;
-        TextView qty, totalPrice, nameShop, nameGame, itemName;
+        TextView qty, totalPrice, nameGame, itemName;
 
         public viewHolder(@NonNull View itemView, RecycleViewTransactions recycleViewTransactions) {
             super(itemView);
             imageItem=itemView.findViewById(R.id.imageItem);
             qty=itemView.findViewById(R.id.qty);
             totalPrice=itemView.findViewById(R.id.totalPrice);
-            nameShop=itemView.findViewById(R.id.nameShop);
             nameGame=itemView.findViewById(R.id.nameGame);
             itemName=itemView.findViewById(R.id.itemName);
 
