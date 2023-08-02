@@ -69,10 +69,11 @@ public class Console extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         List<HomePageItem> items = new ArrayList<HomePageItem>();
 
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
-        items.add(new HomePageItem("Mobile Legend", R.drawable.cardimg1));
+        items.add(new HomePageItem("Minecraft", R.drawable.minecraft_logo, "Console"));
+        items.add(new HomePageItem("Mario Bros", R.drawable.mario_logo, "Console"));
+        items.add(new HomePageItem("Overwatch", R.drawable.overwatch_logo, "Console"));
+        items.add(new HomePageItem("Apex Legends", R.drawable.apex_logo, "Console"));
+        items.add(new HomePageItem("Fortnite", R.drawable.fortnite_logo, "Console"));
 
         recyclerView.setAdapter(new MyAdapter(view.getContext(), items));
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 3));
