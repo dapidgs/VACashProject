@@ -31,12 +31,12 @@ public class ProfilePage extends AppCompatActivity implements RecycleViewTransac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
 
-        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb1,"2 pcs", "30000", "Apollo", "Mobile Legends", "MLBB 50 Diamonds"));
-        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb2,"5 pcs", "30000", "Maju Jaya", "Mobile Legends", "MLBB 50 Diamonds"));
-        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb3,"2 pcs", "30000", "Apollo", "Mobile Legends", "MLBB 50 Diamonds"));
-        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb1,"3 pcs", "30000", "Maju Jaya", "Mobile Legends", "MLBB 50 Diamonds"));
-        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb3,"2 pcs", "30000", "Apollo", "Mobile Legends", "MLBB 50 Diamonds"));
-        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb2,"3 pcs", "30000", "Maju Jaya", "Mobile Legends", "MLBB 50 Diamonds"));
+        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb1,"2 pcs", "30000", "Mobile Legends", "MLBB 50 Diamonds"));
+        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb2,"5 pcs", "30000", "Mobile Legends", "MLBB 50 Diamonds"));
+        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb3,"2 pcs", "30000", "Mobile Legends", "MLBB 50 Diamonds"));
+        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb1,"3 pcs", "30000", "Mobile Legends", "MLBB 50 Diamonds"));
+        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb3,"2 pcs", "30000", "Mobile Legends", "MLBB 50 Diamonds"));
+        itemTransactionsList.add(new ItemTransactions(R.drawable.mlbb2,"3 pcs", "30000",  "Mobile Legends", "MLBB 50 Diamonds"));
 
         RVTransaction = findViewById(R.id.RVTransaction);
         AdapterTransactions adapterTransactions = new AdapterTransactions(this,itemTransactionsList, this);

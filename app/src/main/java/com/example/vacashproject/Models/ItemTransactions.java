@@ -4,7 +4,6 @@ public class ItemTransactions {
     private int imageItem;
     private String qty;
     private String totalPrice;
-    private String nameShop;
     private String nameGame;
     private String itemName;
 
@@ -32,13 +31,6 @@ public class ItemTransactions {
     public void setTotalPrice(String totalPrice) {
         this.totalPrice = totalPrice;
     }
-    public String getNameShop() {
-        return nameShop;
-    }
-
-    public void setNameShop(String nameShop) {
-        this.nameShop = nameShop;
-    }
 
     public String getNameGame() {
         return nameGame;
@@ -56,11 +48,10 @@ public class ItemTransactions {
         this.itemName = itemName;
     }
 
-    public ItemTransactions(int imageItem, String qty, String totalPrice, String nameShop, String nameGame, String itemName) {
+    public ItemTransactions(int imageItem, String qty, String totalPrice, String nameGame, String itemName) {
         this.imageItem = imageItem;
         this.qty = qty;
         this.totalPrice = totalPrice;
-        this.nameShop = nameShop;
         this.nameGame = nameGame;
         this.itemName = itemName;
     }

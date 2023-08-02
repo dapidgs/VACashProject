@@ -27,7 +27,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="1.0"
+            >
 
             <ImageView
                 android:id="@+id/imageItem"
@@ -107,13 +108,11 @@
         </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/nameShop"
             android:layout_width="406dp"
             android:layout_height="20dp"
             android:background="@color/primary_teal"
             android:justificationMode="inter_word"
             android:gravity="center"
-            android:text="Name Shop"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
