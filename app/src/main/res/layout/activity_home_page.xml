@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:gravity="center_vertical"
-                android:text="Seriakan Petualanganmu!"
+                android:text="Let's shop for your journey!"
                 android:textColor="@color/white"
                 android:textSize="23.5sp"
                 android:textStyle="bold" />
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:gravity="center_vertical"
-                android:text="Hal-hal yang Diharapkan di Diablo IV | DG MENYENANGKAN!"
+                android:text="Find new items here and launch your journey."
                 android:textColor="@color/primary_white"
                 android:textSize="23.5sp"
                 android:textStyle="bold" />
