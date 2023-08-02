@@ -37,6 +37,9 @@ public class ProfilePage extends AppCompatActivity implements RecycleViewTransac
     Integer totalBalance = 0;
 
     TextView topUpError;
+
+//    email user
+    TextView user_email;
     private List<ItemTransactions> itemTransactionsList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
