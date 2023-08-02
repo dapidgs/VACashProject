@@ -30,6 +30,7 @@ public class ItemPage extends AppCompatActivity {
 
         Intent fromHome = getIntent();
         HomePageItem game = (HomePageItem) fromHome.getSerializableExtra("game");
+
         gameTypeTitle = findViewById(R.id.gameTypeTitle);
         gameTypeTitle.setText(game.getGameType());
 

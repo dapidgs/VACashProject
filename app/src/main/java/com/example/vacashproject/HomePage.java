@@ -1,11 +1,16 @@
 package com.example.vacashproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toolbar;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
@@ -20,7 +25,7 @@ public class HomePage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
-    Toolbar toolbar;
+   androidx.appcompat.widget.Toolbar toolbar;
     // end burger2
 
     TabLayout tabLayout;
@@ -41,32 +46,59 @@ public class HomePage extends AppCompatActivity {
     int image4 = R.drawable.image4;
     int[] carouselImages = {image1, image2, image3, image4};
 
+    //burger
+    public void onHomeClick(MenuItem item) {
+        Intent homeIntent = new Intent(HomePage.this, HomePage.class);
+        startActivity(homeIntent);
+    }
+
+    public void onProfileClick(MenuItem item) {
+        Intent profileIntent = new Intent(HomePage.this, ProfilePage.class);
+        startActivity(profileIntent);
+    }
+
+    public void onLogoutClick(MenuItem item) {
+        Intent logoutIntent = new Intent(HomePage.this, Login.class);
+        startActivity(logoutIntent);
+    }
+    //endburger
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-
         // burger2
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
-        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
-
-
+//        toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
+        toolbar.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        // Menonaktifkan animasi transisi slide
-//        toggle.setDrawerSlideAnimationEnabled(false);
-//        toggle.setHomeAsUpIndicator(R.drawable.baseline_menu_24); // Mengatur ikon navigasi di posisi "end"
-//        toggle.syncState();
-        //        drawerLayout.addDrawerListener(toggle);
-//        toggle.syncState();
 
-        // end burger2
+// Mengakses ikon burger
+        ImageView burgerIcon = findViewById(R.id.burgerIcon);
+        burgerIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START); // Ganti dengan GRAVITY yang sesuai
+            }
+        });
+
+// Mengakses ikon panah
+        ImageView arrowIcon = findViewById(R.id.arrowIcon);
+        arrowIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Aksi saat tombol panah kembali ditekan
+            }
+        });
+// end burger2
+
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
@@ -111,7 +143,7 @@ public class HomePage extends AppCompatActivity {
 
         // create adapter
         carouselAdapter = new CarouselAdapter(this, carouselImages);
-        carouselContainer.setAdapter(carouselAdapter);
+            carouselContainer.setAdapter(carouselAdapter);
 
         imageChange();
     }

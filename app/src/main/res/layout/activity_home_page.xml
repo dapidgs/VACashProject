@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
-
-
+    android:layoutDirection="rtl">
     <com.google.android.material.navigation.NavigationView
         app:itemTextColor="@color/white"
         android:background="@drawable/gradient"
         android:layout_width="170dp"
         android:layout_height="match_parent"
+        android:layoutDirection="ltr"
         android:id="@+id/nav_view"
         app:menu="@menu/main_menu"
         android:layout_gravity="start"/>
@@ -25,23 +24,53 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:background="@drawable/gradient"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/gradient"
             android:orientation="vertical"
             android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:context=".HomePage">
 
             <androidx.appcompat.widget.Toolbar
-                app:titleTextColor="@color/white"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:layoutDirection="ltr"
+                app:titleTextColor="@color/white"
+                app:contentInsetStart="0dp">
+
+                <!-- Ikon burger menu (kanan) -->
+                <ImageView
+                    android:id="@+id/burgerIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_menu_profile"
+                    android:layout_gravity="end" />
+
+                <!-- Ruang kosong di tengah (untuk memberi jarak antara ikon) -->
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+
+                <!-- Ikon panah (kiri) -->
+                <ImageView
+                    android:id="@+id/arrowIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_arrow_back_left_white_24dp"
+                    android:layout_gravity="start" />
+
             </androidx.appcompat.widget.Toolbar>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -63,19 +92,18 @@
             <!--            app:shapeAppearanceOverlay="@style/roundimageview"-->
             <!--        />-->
 
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="200dp"-->
-<!--                app:cardCornerRadius="20dp">-->
-<!--            </androidx.cardview.widget.CardView>-->
-
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="200dp"-->
+            <!--                app:cardCornerRadius="20dp">-->
+            <!--            </androidx.cardview.widget.CardView>-->
 
             <androidx.viewpager.widget.ViewPager
-                android:layout_marginTop="20dp"
                 android:id="@+id/carouselContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -94,11 +122,16 @@
                 app:tabIndicatorColor="@color/white"
                 app:tabTextColor="@color/white" />
 
+            <androidx.drawerlayout.widget.DrawerLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr">
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </androidx.drawerlayout.widget.DrawerLayout>
 
             <!--    <androidx.recyclerview.widget.RecyclerView-->
             <!--        android:id="@+id/recyclerView"-->
