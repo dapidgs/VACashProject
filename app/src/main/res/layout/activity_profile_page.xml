@@ -27,7 +27,7 @@
             android:layout_width="170dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="65dp"
             android:background="@drawable/gradient"
             android:layoutDirection="ltr"
             app:itemTextColor="@color/white"
@@ -42,8 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:paddingTop="20dp">
+                android:orientation="vertical">
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar1"
