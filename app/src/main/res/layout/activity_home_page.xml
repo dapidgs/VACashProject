@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
-    android:layoutDirection="rtl">
+    android:layoutDirection="rtl"
+    tools:context=".HomePage">
     <com.google.android.material.navigation.NavigationView
+        app:menu="@menu/main_menu"
         app:itemTextColor="@color/white"
         android:background="@drawable/gradient"
         android:layout_width="170dp"
         android:layout_height="match_parent"
         android:layoutDirection="ltr"
         android:id="@+id/nav_view"
-        app:menu="@menu/main_menu"
         android:layout_gravity="start"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +29,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/gradient"
             android:orientation="vertical"
-            android:padding="20dp"
+            android:padding="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -54,7 +55,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/baseline_menu_profile"
-                    android:layout_gravity="end" />
+                    android:layout_gravity="end"/>
 
                 <!-- Ruang kosong di tengah (untuk memberi jarak antara ikon) -->
                 <Space
@@ -72,14 +73,7 @@
             </androidx.appcompat.widget.Toolbar>
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="Seriakan Petualanganmu!"
-                android:textColor="@color/white"
-                android:textSize="23.5sp"
-                android:textStyle="bold" />
+
 
             <!--        <com.google.android.material.imageview.ShapeableImageView-->
             <!--            android:layout_width="match_parent"-->
@@ -98,40 +92,56 @@
             <!--                app:cardCornerRadius="20dp">-->
             <!--            </androidx.cardview.widget.CardView>-->
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/carouselContainer"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="20dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:gravity="center_vertical"
-                android:text="Hal-hal yang Diharapkan di Diablo IV | DG MENYENANGKAN!"
-                android:textColor="@color/primary_white"
-                android:textSize="23.5sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                app:tabIndicatorColor="@color/white"
-                app:tabTextColor="@color/white" />
-
-            <androidx.drawerlayout.widget.DrawerLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layoutDirection="ltr">
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-            </androidx.drawerlayout.widget.DrawerLayout>
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="Seriakan Petualanganmu!"
+                    android:textColor="@color/white"
+                    android:textSize="23.5sp"
+                    android:textStyle="bold" />
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/carouselContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:gravity="center_vertical"
+                    android:text="Hal-hal yang Diharapkan di Diablo IV | DG MENYENANGKAN!"
+                    android:textColor="@color/primary_white"
+                    android:textSize="23.5sp"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabTextColor="@color/white" />
+
+                <androidx.drawerlayout.widget.DrawerLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutDirection="ltr">
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </androidx.drawerlayout.widget.DrawerLayout>
+
+            </LinearLayout>
+
 
             <!--    <androidx.recyclerview.widget.RecyclerView-->
             <!--        android:id="@+id/recyclerView"-->

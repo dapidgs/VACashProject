@@ -47,13 +47,13 @@
                 android:textColor="@color/primary_white"
                 android:textSize="21sp" />
 
-            <TextView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:fontFamily="@font/font_awesome_solid"
-                android:text="\uf0c9"
-                android:textColor="@color/primary_white"
-                android:textSize="23sp" />
+<!--            <TextView-->
+<!--                android:layout_width="25dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:fontFamily="@font/font_awesome_solid"-->
+<!--                android:text="\uf0c9"-->
+<!--                android:textColor="@color/primary_white"-->
+<!--                android:textSize="23sp" />-->
 
         </LinearLayout>
 

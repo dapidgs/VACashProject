@@ -1,7 +1,10 @@
 package com.example.vacashproject;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,10 +19,11 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.vacashproject.Adapters.TabAdapter;
+import com.example.vacashproject.Models.Item;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class HomePage extends AppCompatActivity {
+public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     // burger2
     DrawerLayout drawerLayout;
@@ -50,7 +54,7 @@ public class HomePage extends AppCompatActivity {
     //burger
 
 //    public void onHomeClick(MenuItem item) {
-//        System.out.println("test masuk");
+////        Log.d("MyTag", "test masuk");
 //        Intent homeIntent = new Intent(HomePage.this, HomePage.class);
 //        startActivity(homeIntent);
 //    }
@@ -74,6 +78,8 @@ public class HomePage extends AppCompatActivity {
         // burger2
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,7 +87,13 @@ public class HomePage extends AppCompatActivity {
         // toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
         toolbar.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this,
+                drawerLayout,
+                toolbar,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close
+        );
 
         // Mengakses ikon burger
         ImageView burgerIcon = findViewById(R.id.burgerIcon);
@@ -180,6 +192,52 @@ public class HomePage extends AppCompatActivity {
 //    }
     // end doa mikel
 
+    private static final int NAV_HOME = R.id.nav_home;
+    private static final int NAV_PROFILE = R.id.nav_profile;
+    private static final int NAV_LOGOUT = R.id.nav_logout;
+
+    public enum NavigationItem {
+        HOME(R.id.nav_home),
+        PROFILE(R.id.nav_profile),
+        LOGOUT(R.id.nav_logout);
+
+        private final int itemId;
+
+        NavigationItem(int itemId) {
+            this.itemId = itemId;
+        }
+
+        public int getItemId() {
+            return itemId;
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        try {
+            Log.d(TAG, "onNavigationItemSelected: " + item.getItemId());
+//            switch (item.getItemId()) {
+//                case NAV_HOME:
+//                    Intent toHome = new Intent(HomePage.this, HomePage.class);
+//                    startActivity(toHome);
+//                    break;
+//                case NAV_PROFILE:
+//                    Intent toProfile = new Intent(HomePage.this, ProfilePage.class);
+//                    startActivity(toProfile);
+//                    break;
+//                case NAV_LOGOUT:
+//                    Intent logout = new Intent(HomePage.this, Login.class);
+//                    logout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(logout);
+//                    break;
+//            }
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     void imageChange(){
         carouselContainer.postDelayed(new Runnable() {
@@ -194,7 +252,15 @@ public class HomePage extends AppCompatActivity {
         }, 3000);
     }
 
-
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
 
 
