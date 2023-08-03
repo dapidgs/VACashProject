@@ -47,42 +47,43 @@ public class HomePage extends AppCompatActivity {
     int[] carouselImages = {image1, image2, image3, image4};
 
 
-
     //burger
 
-    public void onHomeClick(MenuItem item) {
-        Intent homeIntent = new Intent(HomePage.this, HomePage.class);
-        startActivity(homeIntent);
-    }
-
-    public void onProfileClick(MenuItem item) {
-        Intent profileIntent = new Intent(HomePage.this, ProfilePage.class);
-        startActivity(profileIntent);
-    }
-
-    public void onLogoutClick(MenuItem item) {
-        Intent logoutIntent = new Intent(HomePage.this, Login.class);
-        startActivity(logoutIntent);
-    }
+//    public void onHomeClick(MenuItem item) {
+//        System.out.println("test masuk");
+//        Intent homeIntent = new Intent(HomePage.this, HomePage.class);
+//        startActivity(homeIntent);
+//    }
+//
+//    public void onProfileClick(MenuItem item) {
+//        Intent profileIntent = new Intent(HomePage.this, ProfilePage.class);
+//        startActivity(profileIntent);
+//    }
+//
+//
+//    public void onLogoutClick(MenuItem item) {
+//        Intent logoutIntent = new Intent(HomePage.this, Login.class);
+//        startActivity(logoutIntent);
+//    }
     //endburger
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        // burger2
 
+        // burger2
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-//        toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
+        // toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
         toolbar.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
-// Mengakses ikon burger
+        // Mengakses ikon burger
         ImageView burgerIcon = findViewById(R.id.burgerIcon);
         burgerIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +92,7 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-// Mengakses ikon panah
+        // Mengakses ikon panah
         ImageView arrowIcon = findViewById(R.id.arrowIcon);
         arrowIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,9 +100,8 @@ public class HomePage extends AppCompatActivity {
                 onBackPressed(); // Aksi saat tombol panah kembali ditekan
             }
         });
-// end burger2
 
-
+        // end burger2
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
 
@@ -119,12 +119,10 @@ public class HomePage extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
@@ -152,6 +150,7 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+
 //    @Override
 //    public void onBackPressed(){
 //        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -161,6 +160,25 @@ public class HomePage extends AppCompatActivity {
 //        }
 //    }
 
+    //doamikel
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        Integer id = item.getItemId();
+//
+//        if(id == R.id.home){
+//            Intent HomeActivity = new Intent(HomePage.this, HomePage.class);
+//            startActivity(HomeActivity);
+//        } else if (id == R.id.profile) {
+//            Intent ProfileActivity = new Intent(HomePage.this, ProfilePage.class);
+//            startActivity(ProfileActivity);
+//        } else if (id == R.id.logout) {
+//            Intent LogoutActivity = new Intent(HomePage.this, Login.class);
+//            startActivity(LogoutActivity);
+//        }
+//
+//        return true;
+//    }
+    // end doa mikel
 
 
     void imageChange(){
@@ -175,6 +193,8 @@ public class HomePage extends AppCompatActivity {
             // dalam milliseconds
         }, 3000);
     }
+
+
 }
 
 

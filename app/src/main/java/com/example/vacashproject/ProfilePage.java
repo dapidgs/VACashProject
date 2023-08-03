@@ -56,6 +56,10 @@ public class ProfilePage extends AppCompatActivity implements RecycleViewTransac
 //        toolbar.setNavigationIcon(R.drawable.baseline_menu_24);
         toolbar1.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
 
+        user_email = findViewById(R.id.user_email);
+        String email = getIntent().getStringExtra("email");
+
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar1, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
 // Mengakses ikon burger
@@ -103,6 +107,9 @@ public class ProfilePage extends AppCompatActivity implements RecycleViewTransac
                 totalBalance += parse(topUpField.getText().toString());
                 balance.setText(totalBalance.toString());
         });
+        Intent profileIntent = new Intent(ProfilePage.this, DetailPage.class);
+        profileIntent.putExtra("balance", totalBalance);
+
     }
 
     public Integer parse (String text) {

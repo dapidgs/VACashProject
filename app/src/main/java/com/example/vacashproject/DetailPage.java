@@ -29,6 +29,7 @@ public class DetailPage extends AppCompatActivity {
     TextView plus, minus, total, price;
     int count = 0;
     int totalPayment = 0;
+    String balance;
 
     //    Dialog Box
     TextView dialogMsg, closeDialog;
@@ -127,6 +128,9 @@ public class DetailPage extends AppCompatActivity {
             String username_check = username.getText().toString();
             String value_to_string = value.getText().toString();
             int value_check = Integer.parseInt(value_to_string);
+            balance = getIntent().getStringExtra("balance");
+            int balance_check = Integer.parseInt(balance);
+
             if(email_check.isEmpty()){
 //                openDialog("Please enter your email");
                 dialogMsg.setText("Please enter your email");
@@ -151,6 +155,12 @@ public class DetailPage extends AppCompatActivity {
                 dialogMsg.setText("Quantity must be greater than 0");
                 background.setVisibility(View.VISIBLE);
                 dialog.setVisibility(View.VISIBLE);
+            }else if(balance_check > totalPayment){
+                dialogMsg.setText("Your balance is not enough");
+                background.setVisibility(View.VISIBLE);
+                dialog.setVisibility(View.VISIBLE);
+            }else{
+
             }
 //            kurang validasi untuk total payment <= account's ballance
         });
